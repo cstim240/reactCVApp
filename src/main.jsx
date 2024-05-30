@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Header from './components/header.jsx'
+import InputForm from './components/inputForm.jsx'
+import OutputPreview from './components/outputPreview.jsx'
 import './index.css'
 
 /*
@@ -33,6 +35,10 @@ These will be imported in the components.
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <div>
+      <InputForm />
+      <OutputPreview />
+    </div>
   </React.StrictMode>,
 )

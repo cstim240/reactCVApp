@@ -33,3 +33,5 @@ function App() {
 }
 
 export default App
+
+//keep as an example of how to use the useState hook
