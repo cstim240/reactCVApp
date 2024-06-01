@@ -31,26 +31,28 @@ function GeneralInfo({onFormSubmit}){
         <div>
 
             {isFormVisible ? (
-                <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="name" value={formFields.name} onChange={handleInputChange}/>
-                </label> 
-                
-                <label>
-                    Email:
-                    <input type="text" name="email" value={formFields.email} onChange={handleInputChange}/>
-                </label>
+                <form onSubmit={handleSubmit} className="generalInfoForm">
+                    <label>
+                        Name:
+                        <input type="text" name="name" value={formFields.name} onChange={handleInputChange}/>
+                    </label> 
+                    
+                    <label>
+                        Email:
+                        <input type="text" name="email" value={formFields.email} onChange={handleInputChange}/>
+                    </label>
 
-                <label>
-                    Phone:
-                    <input type="text" name="phone" value={formFields.phone} onChange={handleInputChange}/>
-                </label>
+                    <label>
+                        Phone:
+                        <input type="text" name="phone" value={formFields.phone} onChange={handleInputChange}/>
+                    </label>
+                    <br/>
 
-                <input type="submit" value="Submit" />
-            </form>
+                    <input className="button" type="submit" value="Submit" />
+                    <input className="button" type="button" value="Close" onClick={() => setIsFormVisible(false)}/>
+                </form>
             ) : (
-                <div onClick={handleDivClick}>
+                <div onClick={handleDivClick} id="openGenInfoDiv">
                     General Information
                     </div>
             )}

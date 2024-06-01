@@ -12,15 +12,17 @@ function ParentComponent() {
 
   return (
     <React.StrictMode>
-      <Header />
-      <div>
-        
-        <div className="inputForm">
-          <GeneralInfo onFormSubmit={handleFormSubmit}/>
-        </div>
+      <div className="wrapper">
+        <Header />
+        <div className="contentBody">
+          <div className="inputForm">
+            <GeneralInfo onFormSubmit={handleFormSubmit}/>
+          </div>
 
-        <OutputPreview formData={formData}/>
+          <OutputPreview formData={formData}/>
+        </div>
       </div>
+      
     </React.StrictMode>
   )
 }
