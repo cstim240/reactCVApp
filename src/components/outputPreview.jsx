@@ -6,6 +6,10 @@ function OutputPreview({formData}) {
         <div>
             <p>Name: </p>
             <p>{formData.name}</p>
+            <p>Email: </p>
+            <p>{formData.email}</p>
+            <p>Phone: </p>
+            <p>{formData.phone}</p>
         </div>
     )
 }

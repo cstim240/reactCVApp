@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import Header from './header.jsx';
-import InputForm from './inputForm.jsx';
+import GeneralInfo from './GeneralInfo.jsx';
 import OutputPreview from './outputPreview.jsx';
 
 function ParentComponent() {
-  const [formData, setFormData] = useState({ name: ''});
-
+  const [formData, setFormData] = useState({});
+  
   const handleFormSubmit = (data) => {
     setFormData(data);
-    console.log(`The object of formData is: ${data}`);
   };
 
   return (
     <React.StrictMode>
       <Header />
       <div>
-        <InputForm onFormSubmit={handleFormSubmit}/>
+        
+        <div className="inputForm">
+          <GeneralInfo onFormSubmit={handleFormSubmit}/>
+        </div>
+
         <OutputPreview formData={formData}/>
       </div>
     </React.StrictMode>
