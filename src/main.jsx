@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import ParentComponent from './components/ParentComponent.jsx';
-import './index.css'
+import './styles/ParentComponentStyle.css'
+import './styles/GeneralInfoStyle.css'
 
 /*
 Application structure: 
