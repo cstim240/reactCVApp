@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import ParentComponent from './components/ParentComponent.jsx';
 import './styles/ParentComponentStyle.css'
 import './styles/GeneralInfoStyle.css'
+import './styles/outputStyle.css'
 
 /*
 Application structure: 

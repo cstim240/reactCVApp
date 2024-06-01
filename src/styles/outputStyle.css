@@ -1,0 +1,30 @@
+.outputLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F3F3;
+    width: 75%;
+    height: 80vh;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.generalOutput {
+    width: 100%;
+    text-align: center;
+}
+
+
+#nameHeader {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+    background-color: #f8f8f8;
+}
+
+.emailNnumber {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    gap: 10px;
+}

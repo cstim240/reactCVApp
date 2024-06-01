@@ -3,13 +3,22 @@ import PropTypes from 'prop-types';
 
 function OutputPreview({formData}) {
     return (
-        <div>
-            <p>Name: </p>
-            <p>{formData.name}</p>
-            <p>Email: </p>
-            <p>{formData.email}</p>
-            <p>Phone: </p>
-            <p>{formData.phone}</p>
+        <div className="outputLayout">
+            <div className="generalOutput">
+                <p id="nameHeader">{formData.name}</p>
+                <div className="emailNnumber">
+                    <p>{formData.email}</p>
+                    <p>{formData.phone}</p> 
+                    <p>{formData.location}</p>
+                </div>
+                
+            </div>
+            
+
+            <div>
+
+            </div>
+            
         </div>
     )
 }

@@ -6,7 +6,8 @@ function GeneralInfo({onFormSubmit}){
     const [formFields, setFormFields] = useState({
         name: '',
         email: '',
-        phone: ''
+        phone: '',
+        location: '',
     });
 
     const [isFormVisible, setIsFormVisible] = useState(false);
@@ -15,7 +16,7 @@ function GeneralInfo({onFormSubmit}){
         const {name, value} = event.target;
         setFormFields(prevState => ({... prevState, [name]: value})); 
         //name is the key in the formFields object
-        onFormSubmit(formFields);
+        //onFormSubmit(formFields);
     }
 
     const handleSubmit = (event) => {
@@ -45,6 +46,11 @@ function GeneralInfo({onFormSubmit}){
                     <label>
                         Phone:
                         <input type="text" name="phone" value={formFields.phone} onChange={handleInputChange}/>
+                    </label>
+
+                    <label>
+                        Location:
+                        <input type="text" name="location" value={formFields.location} onChange={handleInputChange}/>
                     </label>
                     <br/>
 
