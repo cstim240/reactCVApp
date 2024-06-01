@@ -1,8 +1,5 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './components/header.jsx'
-import InputForm from './components/inputForm.jsx'
-import OutputPreview from './components/outputPreview.jsx'
+import ParentComponent from './components/ParentComponent.jsx';
 import './index.css'
 
 /*
@@ -33,12 +30,12 @@ These will be imported in the components.
 
 */
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Header />
+function Main() {
+  return (
     <div>
-      <InputForm />
-      <OutputPreview />
+      <ParentComponent />
     </div>
-  </React.StrictMode>,
-)
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Main />);

@@ -1,15 +1,17 @@
-import GeneralInfoForm from "./generalInfoForm";
-import EducationalExpForm from "./educationExpForm";
-import WorkExpForm from "./workExpForm";
 
-function InputForm() {
+import PropTypes from 'prop-types';
+
+function OutputPreview({formData}) {
     return (
         <div>
-            <GeneralInfoForm />
-            <EducationalExpForm />
-            <WorkExpForm />
+            <p>Name: </p>
+            <p>{formData.name}</p>
         </div>
     )
 }
 
-export default InputForm;
+OutputPreview.propTypes = {
+    formData: PropTypes.object.isRequired
+};
+
+export default OutputPreview;
