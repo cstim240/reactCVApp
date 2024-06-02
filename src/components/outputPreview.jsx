@@ -1,22 +1,29 @@
 
 import PropTypes from 'prop-types';
 
-function OutputPreview({formData}) {
+function OutputPreview({generalInfoData, educationData}) {
     return (
         <div className="outputLayout">
             <div className="generalOutput">
-                <p id="nameHeader">{formData.name}</p>
+                <p id="nameHeader">{generalInfoData.name}</p>
                 <div className="emailNnumber">
-                    <p>{formData.email}</p>
-                    <p>{formData.phone}</p> 
-                    <p>{formData.location}</p>
+                    <p>{generalInfoData.email}</p>
+                    <p>{generalInfoData.phone}</p> 
+                    <p>{generalInfoData.location}</p>
                 </div>
                 
             </div>
             
 
             <div>
-
+                <p>Education</p>
+                {educationData.map((education, index) => (
+                    <div key={index}>
+                        <p>School: {education.school}</p>
+                        <p>Degree: {education.degree}</p>
+                        <p>Graduation Date: {education.graduationDate}</p>
+                    </div>
+                ))}
             </div>
             
         </div>
@@ -24,7 +31,9 @@ function OutputPreview({formData}) {
 }
 
 OutputPreview.propTypes = {
-    formData: PropTypes.object.isRequired
+    generalInfoData: PropTypes.object.isRequired,
+    educationData: PropTypes.object.isRequired,
 };
+
 
 export default OutputPreview;
