@@ -4,10 +4,10 @@ import GeneralInfo from './GeneralInfo.jsx';
 import OutputPreview from './outputPreview.jsx';
 
 function ParentComponent() {
-  const [formData, setFormData] = useState({});
+  const [generalInfoData, setGeneralInfoData] = useState({});
   
-  const handleFormSubmit = (data) => {
-    setFormData(data);
+  const handleGeneralInfoSubmit = (data) => {
+    setGeneralInfoData(data);
   };
 
   return (
@@ -16,10 +16,10 @@ function ParentComponent() {
         <Header />
         <div className="contentBody">
           <div className="inputForm">
-            <GeneralInfo onFormSubmit={handleFormSubmit}/>
+            <GeneralInfo onFormSubmit={handleGeneralInfoSubmit}/>
           </div>
 
-          <OutputPreview formData={formData}/>
+          <OutputPreview formData={generalInfoData}/>
         </div>
       </div>
       
