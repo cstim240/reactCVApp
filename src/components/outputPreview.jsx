@@ -7,9 +7,9 @@ function OutputPreview({generalInfoData, educationData, practicalExp}) {
             <div className="generalOutput">
                 <p id="nameHeader">{generalInfoData.name}</p>
                 <div className="emailNnumber">
-                    <p>{generalInfoData.email}</p>
-                    <p>{generalInfoData.phone}</p> 
-                    <p>{generalInfoData.location}</p>
+                    <p>&#128235; {generalInfoData.email}</p>
+                    <p>&#128222; {generalInfoData.phone}</p> 
+                    <p>&#127758; {generalInfoData.location}</p>
                 </div>
                 
             </div>
