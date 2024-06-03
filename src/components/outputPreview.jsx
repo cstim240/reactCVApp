@@ -17,11 +17,12 @@ function OutputPreview({generalInfoData, educationData}) {
 
             <div>
                 {
-                    (educationData.school1 !== '' || educationData.school2 !== '' ||
-                    educationData.degree1 !== '' || educationData.degree2 !== '' ||
-                    educationData.graduationDate1 !== '' || educationData.graduationDate2 !== ''
+                    (educationData.school1 !== undefined || educationData.school2 !== undefined ||
+                    educationData.degree1 !== undefined || educationData.degree2 !== undefined 
+                    || educationData.graduationDate1 !== undefined || educationData.graduationDate2 !== undefined
                     ) ? 
-                    <h2>Education</h2> : null
+                    <h3>Education</h3>
+                    : null
                 }
                 <div>
                     <p>{educationData.school1}</p>

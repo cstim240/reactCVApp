@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 function GeneralInfo({onFormSubmit}){
     const [formFields, setFormFields] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        location: '',
+        name: 'Default Name',
+        email: 'defaultemail@default.com',
+        phone: '604-778-1234',
+        location: 'Default, BC',
     });
 
     const [isFormVisible, setIsFormVisible] = useState(false);
