@@ -7,6 +7,7 @@ import OutputPreview from './outputPreview.jsx';
 function ParentComponent() {
   const [generalInfoData, setGeneralInfoData] = useState({});
   const [educationData, setEducationData] = useState({});
+  const [practicalExp, setPracticalExp] = useState({});
   
   const handleGeneralInfoSubmit = (data) => {
     setGeneralInfoData(data);
@@ -16,6 +17,9 @@ function ParentComponent() {
     setEducationData(data);
   };
 
+  const handlePracticalExpSubmit = (data) => {
+    setPracticalExp(data);
+  };
 
   return (
     <React.StrictMode>

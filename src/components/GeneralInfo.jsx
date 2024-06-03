@@ -15,9 +15,16 @@ function GeneralInfo({onFormSubmit}){
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
-        setFormFields(prevState => ({... prevState, [name]: value})); 
+        setFormFields(prevState => {
+            const updatedFormFields = {... prevState, [name]: value};
+            onFormSubmit(updatedFormFields);
+            return updatedFormFields;
+    }); 
+    //prevState is the previous state of the formFields object.
+    //Callback function is passed as a prop to the onFormSubmit function.
+    //prevState is updated by making a copy of the previous state
+    //then this updated 'formfields' is passed onto onFormSubmit to update parent component
         //name is the key in the formFields object
-        //onFormSubmit(formFields);
     }
 
     const handleSubmit = (event) => {

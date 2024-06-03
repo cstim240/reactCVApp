@@ -15,7 +15,11 @@ function EducationInfo({ onFormSubmit }){
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
-        setEducationObj(prevState => ({...prevState, [name]: value}));
+        setEducationObj(prevState => {
+            const updatedEducationObjs = {...prevState, [name]: value}
+            onFormSubmit(updatedEducationObjs);
+            return updatedEducationObjs;
+        });
     }
 
     const handleSubmit = (event) => {
