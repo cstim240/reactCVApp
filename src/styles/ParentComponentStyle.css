@@ -16,7 +16,9 @@
 
 .wrapper {
   display: flex;
-  padding: 2em;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .contentBody {
@@ -45,8 +47,13 @@
 #siteTitle {
   font-size: 2em;
   font-weight: bold;
-  color: #007BFF;
+  color: #D3D3D3;
   text-shadow: 8px 3px 4px #0d47a1;
   padding: 10px;
+}
+
+#siteTitle:hover {
+  color: lightblue;
+  text-shadow: 8px 3px 4px #0d47a1;
 }
 
