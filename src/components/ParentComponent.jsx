@@ -20,14 +20,14 @@ function ParentComponent() {
   return (
     <React.StrictMode>
       <div className="wrapper">
-        <Header />
         <div className="contentBody">
           <div className="inputForm">
+            <Header/>
             <GeneralInfo onFormSubmit={handleGeneralInfoSubmit}/>
             <EducationInfo onFormSubmit={handleEducationInfoSubmit}/>
           </div>
 
-          <OutputPreview formData={[generalInfoData, educationData]}/>
+          <OutputPreview generalInfoData={generalInfoData} educationData={educationData}/>
 
         </div>
       </div>

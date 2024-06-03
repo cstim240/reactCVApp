@@ -2,7 +2,7 @@
 function Header(){
     return (
         <div className="headerDiv">
-            <h1>C.V. Buddy</h1>
+            <h1 id="siteTitle">C.V. Buddy</h1>
         </div>
     )
 }
