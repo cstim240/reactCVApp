@@ -4,6 +4,7 @@ import GeneralInfo from './GeneralInfo.jsx';
 import EducationInfo from './EducationInfo.jsx';
 import PracticalInfo from './PracticalInfo.jsx';
 import OutputPreview from './outputPreview.jsx';
+import printDocument from './PDFCreate.jsx';
 
 function ParentComponent() {
   const [generalInfoData, setGeneralInfoData] = useState({});
@@ -31,6 +32,9 @@ function ParentComponent() {
             <GeneralInfo onFormSubmit={handleGeneralInfoSubmit}/>
             <EducationInfo onFormSubmit={handleEducationInfoSubmit}/>
             <PracticalInfo onFormSubmit={handlePracticalExpSubmit} />
+            <button onClick={printDocument}>
+              Download as PDF
+            </button>
           </div>
 
           <OutputPreview generalInfoData={generalInfoData} educationData={educationData} practicalExp={practicalExp}/>

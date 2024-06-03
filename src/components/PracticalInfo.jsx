@@ -8,12 +8,12 @@ function PracticalInfo({ onFormSubmit }) {
         company1: 'Google',
         startDate1: '2020-06-01',
         endDate1: '2021-06-01',
-        jobDescription1: 'I worked on the search engine team.',
+        jobDescription1: 'I worked on the search engine team. I got fired after a week for using Bing.',
         jobTitle2: 'Software Engineer',
         company2: 'Facebook',
         startDate2: '2021-06-01',
         endDate2: '2022-06-01',
-        jobDescription2: 'I worked on the social media team.'
+        jobDescription2: 'I made Mark Zuckerburg coffee and he spit it out.'
     });
 
     const handleInputChange = (event) => {
@@ -42,7 +42,7 @@ function PracticalInfo({ onFormSubmit }) {
     return (
         <div>
             {isFormVisible ? (
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="practicalExpForm">
                     <label>
                         Job Title:
                         <input type="text" name="jobTitle1" value={practicalExp.jobTitle1} onChange={handleInputChange} />
@@ -93,6 +93,9 @@ function PracticalInfo({ onFormSubmit }) {
                         Job Description:
                         <input type="text" name="jobDescription2" value={practicalExp.jobDescription2} onChange={handleInputChange} />
                     </label>
+
+                    <button className="button" type="submit">Submit</button>
+                    <button className="button" type="button" onClick={() => setIsFormVisible(false)}>Close</button>
 
                 </form>
                 ) : (
