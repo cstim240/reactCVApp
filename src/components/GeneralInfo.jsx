@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 function GeneralInfo({onFormSubmit}){
     const [formFields, setFormFields] = useState({
@@ -20,13 +21,25 @@ function GeneralInfo({onFormSubmit}){
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault();//prevents the default behavior of the form
+        if (event){
+            event.preventDefault();
+        }
         onFormSubmit(formFields);
     }
 
     const handleDivClick = () => {
         setIsFormVisible(true);
     }
+
+    //useEffect takes two arguments, a function and an array of dependencies.
+    //the function is the side effect that you want to run. In this case its handleSubmit.
+    //the array of dependencies is an array of variables that the side effect depends on.   
+    //by passing an empty array, it means the effect doesn't depend on any variables.
+    //Therefore, it will only run once after the initial render of the component.
+    useEffect(() => {
+        handleSubmit();
+    }, []);
+
 
     return (
         <div>

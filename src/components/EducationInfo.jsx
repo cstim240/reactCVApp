@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 function EducationInfo({ onFormSubmit }){
 
     const [educationObjs, setEducationObj] = useState({
-        school1: '',
-        degree1: '',
-        graduationDate1: '',
-        school2: '',
-        degree2: '',
-        graduationDate2: '',
+        school1: 'Douglas College',
+        degree1: 'Bachelors in Business Administration',
+        graduationDate1: '2025-06-01',
+        school2: 'Langara College',
+        degree2: 'Masters in Craniofacial Science',
+        graduationDate2: '2022-06-02',
     });
 
     const handleInputChange = (event) => {
@@ -18,7 +19,7 @@ function EducationInfo({ onFormSubmit }){
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        if (event) { event.preventDefault();}
         onFormSubmit(educationObjs);
     }
 
@@ -27,6 +28,10 @@ function EducationInfo({ onFormSubmit }){
     const handleDivClick = () => {
         setIsFormVisible(true);
     }
+
+    useEffect(() => {
+        handleSubmit();
+    }, []);
 
     return (
         <div>
