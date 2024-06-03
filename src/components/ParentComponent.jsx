@@ -32,7 +32,7 @@ function ParentComponent() {
             <GeneralInfo onFormSubmit={handleGeneralInfoSubmit}/>
             <EducationInfo onFormSubmit={handleEducationInfoSubmit}/>
             <PracticalInfo onFormSubmit={handlePracticalExpSubmit} />
-            <button onClick={printDocument}>
+            <button onClick={printDocument} id='downloadBtn'>
               Download as PDF
             </button>
           </div>

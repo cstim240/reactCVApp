@@ -1,5 +1,7 @@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+//we are first converting the HTML content to canvas and
+// then converting the canvas to PDF using jsPDF.
 
 const printDocument = () => {
     const input = document.querySelector('.outputLayout');
