@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 
-function OutputPreview({generalInfoData, educationData}) {
+function OutputPreview({generalInfoData, educationData, practicalExp}) {
     return (
         <div className="outputLayout">
             <div className="generalOutput">
@@ -42,6 +42,37 @@ function OutputPreview({generalInfoData, educationData}) {
                 </div>
                 
             </div>
+
+            <div className="practicalLayout">
+                {
+                    (practicalExp.company1 !== undefined || practicalExp.company2 !== undefined ||
+                    practicalExp.startDate1 !== undefined || practicalExp.startDate2 !== undefined 
+                    || practicalExp.endDate1 !== undefined || practicalExp.endDate2 !== undefined
+                    || practicalExp.jobDescription1 !== undefined || practicalExp.jobDescription2 !== undefined
+                    || practicalExp.jobTitle1 !== undefined || practicalExp.jobTitle2 !== undefined
+                    ) ? 
+                    <h2>Practical Experience</h2>
+                    : null
+                }
+                <div className="practicalEntries">
+                    <div>
+                        <div className="practicalCompanyDate">
+                            <p className="practicalCompany">{practicalExp.company1}</p>
+                            <p className="practicalDate">{practicalExp.startDate1} - {practicalExp.endDate1}</p>
+                        </div>
+                        <p>{practicalExp.jobTitle1}</p>
+                        <p>{practicalExp.jobDescription1}</p>
+                    </div>
+                    <div>
+                        <div className="practicalCompanyDate">
+                            <p className="practicalCompany">{practicalExp.company2}</p>
+                            <p className="practicalDate">{practicalExp.startDate2} - {practicalExp.endDate2}</p>
+                        </div>
+                        <p>{practicalExp.jobTitle2}</p>
+                        <p>{practicalExp.jobDescription2}</p>
+                    </div>
+                </div>
+            </div>
             
         </div>
     )
@@ -50,6 +81,7 @@ function OutputPreview({generalInfoData, educationData}) {
 OutputPreview.propTypes = {
     generalInfoData: PropTypes.object.isRequired,
     educationData: PropTypes.object.isRequired,
+    practicalExp: PropTypes.object.isRequired
 };
 
 

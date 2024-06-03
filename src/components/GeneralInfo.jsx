@@ -11,7 +11,6 @@ function GeneralInfo({onFormSubmit}){
         location: 'Default, BC',
     });
 
-    const [isFormVisible, setIsFormVisible] = useState(false);
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
@@ -28,12 +27,14 @@ function GeneralInfo({onFormSubmit}){
     }
 
     const handleSubmit = (event) => {
-        if (event){
+        if (event){ //this if statement is used to prevent the default behavior of the form. also clashes with the useEffect
             event.preventDefault();
         }
         onFormSubmit(formFields);
     }
 
+    //this is for the div that is displayed when the form is not visible
+    const [isFormVisible, setIsFormVisible] = useState(false);
     const handleDivClick = () => {
         setIsFormVisible(true);
     }

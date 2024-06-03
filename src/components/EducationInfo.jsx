@@ -6,10 +6,10 @@ function EducationInfo({ onFormSubmit }){
 
     const [educationObjs, setEducationObj] = useState({
         school1: 'Douglas College',
-        degree1: 'Bachelors in Business Administration',
+        degree1: 'Bachelors of Arts',
         graduationDate1: '2025-06-01',
         school2: 'Langara College',
-        degree2: 'Masters in Craniofacial Science',
+        degree2: 'Masters in Basket Weaving',
         graduationDate2: '2022-06-02',
     });
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './header.jsx';
 import GeneralInfo from './GeneralInfo.jsx';
 import EducationInfo from './EducationInfo.jsx';
+import PracticalInfo from './PracticalInfo.jsx';
 import OutputPreview from './outputPreview.jsx';
 
 function ParentComponent() {
@@ -29,9 +30,10 @@ function ParentComponent() {
             <Header/>
             <GeneralInfo onFormSubmit={handleGeneralInfoSubmit}/>
             <EducationInfo onFormSubmit={handleEducationInfoSubmit}/>
+            <PracticalInfo onFormSubmit={handlePracticalExpSubmit} />
           </div>
 
-          <OutputPreview generalInfoData={generalInfoData} educationData={educationData}/>
+          <OutputPreview generalInfoData={generalInfoData} educationData={educationData} practicalExp={practicalExp}/>
 
         </div>
       </div>
