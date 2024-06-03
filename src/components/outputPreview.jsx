@@ -15,25 +15,32 @@ function OutputPreview({generalInfoData, educationData}) {
             </div>
             
 
-            <div>
+            <div className="educationLayout">
                 {
                     (educationData.school1 !== undefined || educationData.school2 !== undefined ||
                     educationData.degree1 !== undefined || educationData.degree2 !== undefined 
                     || educationData.graduationDate1 !== undefined || educationData.graduationDate2 !== undefined
                     ) ? 
-                    <h3>Education</h3>
+                    <h2>Education</h2>
                     : null
                 }
-                <div>
-                    <p>{educationData.school1}</p>
-                    <p>{educationData.degree1}</p>
-                    <p>{educationData.graduationDate1}</p>
+                <div className="educationEntries">
+                    <div>
+                        <div className="educationSchoolDate">
+                            <p className="educationSchool">{educationData.school1}</p>
+                            <p className="educationDate">{educationData.graduationDate1}</p>
+                        </div>
+                        <p>{educationData.degree1}</p>
+                    </div>
+                    <div>
+                        <div className="educationSchoolDate">
+                            <p className="educationSchool">{educationData.school2}</p>
+                            <p className="educationDate">{educationData.graduationDate2}</p>
+                        </div>
+                        <p>{educationData.degree2}</p>
+                    </div>
                 </div>
-                <div>
-                    <p>{educationData.school2}</p>
-                    <p>{educationData.degree2}</p>
-                    <p>{educationData.graduationDate2}</p>
-                </div>
+                
             </div>
             
         </div>

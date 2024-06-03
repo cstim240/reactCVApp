@@ -17,7 +17,8 @@
 #nameHeader {
     font-size: 40px;
     font-weight: bold;
-    margin: 0px;
+    margin: 10px;
+
     background-color: #f8f8f8;
 }
 
@@ -26,4 +27,35 @@
     justify-content: center;
     background-color: #f8f8f8;
     gap: 10px;
+}
+
+.educationLayout {
+    display: flex;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.educationEntries {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.educationSchoolDate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationSchool, .educationDate {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.educationSchool {
+    text-decoration: underline;
 }
