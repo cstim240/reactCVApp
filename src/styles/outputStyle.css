@@ -29,12 +29,16 @@
     gap: 10px;
 }
 
-.educationLayout {
+.educationLayout, .practicalLayout {
     display: flex;
     background-color: #f8f8f8;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.practicalLayout {
+    max-width: 100%;
 }
 
 .educationEntries {
@@ -45,17 +49,37 @@
     margin-top: -20px;
 }
 
-.educationSchoolDate {
-    display: flex;
-    justify-content: space-between;
+.practicalEntries {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: -20px;
+    max-width: 100%;
 }
 
-.educationSchool, .educationDate {
+.practicalEntries > * {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.educationSchoolDate, .practicalCompanyDate {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.educationSchool, .educationDate, .practicalCompany, .practicalDate {
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 0px;
 }
 
-.educationSchool {
+.educationSchool, .practicalCompany {
     text-decoration: underline;
+}
+
+.jobDescription {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }

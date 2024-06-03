@@ -55,21 +55,21 @@ function OutputPreview({generalInfoData, educationData, practicalExp}) {
                     : null
                 }
                 <div className="practicalEntries">
-                    <div>
+                    <div className="jobContainer"> 
                         <div className="practicalCompanyDate">
                             <p className="practicalCompany">{practicalExp.company1}</p>
                             <p className="practicalDate">{practicalExp.startDate1} - {practicalExp.endDate1}</p>
                         </div>
-                        <p>{practicalExp.jobTitle1}</p>
-                        <p>{practicalExp.jobDescription1}</p>
+                        <p>Position: {practicalExp.jobTitle1}</p>
+                        <p className="jobDescription">Description: {practicalExp.jobDescription1}</p>
                     </div>
-                    <div>
+                    <div className="jobContainer">
                         <div className="practicalCompanyDate">
                             <p className="practicalCompany">{practicalExp.company2}</p>
                             <p className="practicalDate">{practicalExp.startDate2} - {practicalExp.endDate2}</p>
                         </div>
-                        <p>{practicalExp.jobTitle2}</p>
-                        <p>{practicalExp.jobDescription2}</p>
+                        <p>Position: {practicalExp.jobTitle2}</p>
+                        <p className="jobDescription">Description: {practicalExp.jobDescription2}</p>
                     </div>
                 </div>
             </div>
